@@ -6,7 +6,7 @@
         layer = "top";
         anchor = "top-right";
         background-color = "#000000";
-	border-color = "#FFFFFF";
+        border-color = "#FFFFFF";
     };
   };
 }
