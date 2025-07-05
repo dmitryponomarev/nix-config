@@ -15,10 +15,15 @@
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
   home.packages = with pkgs; [ 
-    firefox
-    kitty
-    mpv
-    neovim
+    grim
+    hyprland
+    hyprpicker
+    libnotify
+    slurp
+    swappy
+    waybar
+    wf-recorder
+    wl-clipboard
     steam
   ];
 }

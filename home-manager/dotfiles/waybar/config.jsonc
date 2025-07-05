@@ -1,0 +1,107 @@
+{
+  "layer": "top",
+  "position": "top",
+  //"height": 30, // Waybar height (to be removed for auto height)
+  "spacing": 6, // Gaps between modules (4px)
+  // Choose the order of the modules
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["custom/btc"],
+  "modules-right": [
+    "pulseaudio",
+    // "custom/bt_profile",
+    "disk#root",
+    "disk#data",
+    "memory",
+    "cpu",
+    "temperature",
+    "battery",
+    "clock",
+    "tray",
+    "custom/power"
+  ],
+  // Modules configuration
+  "hyprland/workspaces": {
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
+    "all-outputs": true,
+    "on-click": "activate",
+    "sort-by-number": true,
+    "format": "{name}"
+  },
+  "custom/poweroff": {
+    "tooltip": false,
+    "format": "",
+    "on-click": "bash $HOME/.config/waybar/scripts/poweroff.sh"
+  },
+  "tray": {
+    "icon-size": 21,
+    "spacing": 0,
+    "tooltip": false,
+    "show-passive-items": true
+  },
+  "clock": {
+    "timezone": "Europe/Stockholm",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //"format-alt": "{:%H:%M:%S}"
+    "format": "📅 {:%Y-%m-%d  ⏰ %H:%M:%S}",
+    "interval": 1
+  },
+  "cpu": {
+    "format": "🔥 {usage}%",
+    "tooltip": false
+  },
+  "memory": {
+    "format": "🧠 {used:0.1f}G/{total:0.1f}G"
+  },
+  "disk#root": {
+    "path": "/",
+    "format": "💾 {free}"
+  },
+  "disk#data": {
+    "path": "/data",
+    "format": "🗄️ {free}"
+  },
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "🌡️ {temperatureC}°C"
+  },
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "🔋 {capacity}% {icon}",
+    "format-charging": "🔌 {capacity}%",
+    "format-plugged": "🔌 {capacity}%",
+    "format-alt": "{time} {icon}"
+  },
+  "pulseaudio": {
+    "scroll-step": 5, // %, can be a float
+    "format": "{icon} {volume}% {format_source}",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-bluetooth-muted": "🔇 {icon}",
+    "format-muted": "🔇 {format_source}",
+    "on-click-middle": "pavucontrol",
+    "on-click": "$TERMINAL -e pulsemixer",
+    "on-click-right": "/home/dmpo/.config/waybar/scripts/bt_profile_change.sh",
+    "format-icons": {
+      "headphone": "🎧",
+      "hands-free": "🎧",
+      "headset": "🎧",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["🔊", "🔊", "🔊"]
+    }
+  },
+  "custom/btc": {
+    "tooltip": false,
+    "format": "💲 {}",
+    "restart-interval": 30,
+    "exec": "curl -s 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' | jq .bitcoin.usd"
+  },
+  "custom/power": {
+    "format": "☢️",
+    "on-click": "wlogout"
+  }
+}

@@ -13,7 +13,6 @@
     ./dotfiles/git/default.nix
     ./dotfiles/keepassxc/default.nix
     ./dotfiles/mako/default.nix
-    ./dotfiles/nixvim/default.nix
     ./dotfiles/ncspot/default.nix
     ./dotfiles/starship/default.nix
     ./dotfiles/swaylock/default.nix
@@ -21,30 +20,13 @@
     ./dotfiles/zathura/default.nix
     ./dotfiles/zsh/default.nix
     ./dotfiles/wofi/default.nix
-
-    # If you want to use home-manager modules from other flakes (such as nix-colors):
-    # inputs.nix-colors.homeManagerModule
-
-    # You can also split up your configuration and import pieces of it here:
-    # ./nvim.nix
   ];
 
   nixpkgs = {
-    # You can add overlays here
     overlays = [
-      # If you want to use overlays exported from other flakes:
-      # neovim-nightly-overlay.overlays.default
-
-      # Or define it inline, for example:
-      # (final: prev: {
-      #   hi = final.hello.overrideAttrs (oldAttrs: {
-      #     patches = [ ./change-hello-to-hi.patch ];
-      #   });
-      # })
     ];
     # Configure your nixpkgs instance
     config = {
-      # Disable if you don't want unfree packages
       allowUnfree = true;
       # Workaround for https://github.com/nix-community/home-manager/issues/2942
       allowUnfreePredicate = _: true;
@@ -72,16 +54,7 @@
     firefox
     kitty
     mpv
-    hyprlock
-    hyprpicker
-    waybar
     neovim
-    wl-clipboard
-    grim
-    slurp
-    swappy
-    wf-recorder
-    libnotify
   ];
 
   # Enable home-manager and git

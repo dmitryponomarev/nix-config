@@ -48,7 +48,27 @@
   environment.systemPackages = with pkgs; [
     git
     home-manager
+    croc
+    fzf
+    htop
+    wget
+    btop
   ];
+
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestions.enable = true;
+    syntaxHighlighting.enable = true;
+
+    shellAliases = {
+      vim = "nvim";
+      lf = "yy";
+    };
+
+    histSize = 1000000;
+    histFile = "$HOME/.zsh_history";
+  }; 
 
   programs.gnupg.agent = {
     enable = true;
