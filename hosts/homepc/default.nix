@@ -29,8 +29,8 @@
 
   security.pam.services.swaylock = {};
 
-  nixpgks.config.allowUnfree = true;
-  nixpgks.config.nvidia.acceptLicense = true;
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
