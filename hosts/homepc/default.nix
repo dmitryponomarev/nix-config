@@ -20,6 +20,7 @@
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.desktopManager.cinnamon.enable = false;
 
+
   hardware.graphics.enable = true;
   hardware.nvidia.open = false;
   hardware.nvidia.modesetting.enable = true;
@@ -28,8 +29,17 @@
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   security.pam.services.swaylock = {};
+  security.pam.services.hyprlock = {};
+
+  xdg.portal = {
+    enable = true;
+    extraPortals = [ pkgs.xdg-desktop-portal-hyprland ];
+  };
 
   programs.hyprland.enable = true;
+  programs.hyprland.xwayland.enable = true;
+  programs.hyprland.withUWSM = true;
+  programs.xwayland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
