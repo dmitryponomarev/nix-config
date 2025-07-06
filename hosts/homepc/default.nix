@@ -22,10 +22,10 @@
 
   hardware.graphics.enable = true;
   hardware.nvidia.open = false;
-  hardware.nvidia.modesetting.enable = true;
+  hardware.nvidia.modesetting.enable = false;
   hardware.nvidia.powerManagement.enable = false;
   hardware.nvidia.powerManagement.finegrained = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
 
   security.pam.services.swaylock = {};
 
