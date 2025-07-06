@@ -19,7 +19,7 @@
     libnotify
     slurp
     swappy
-    # waybar
+    waybar
     wf-recorder
     wl-clipboard
   ];

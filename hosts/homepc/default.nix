@@ -15,20 +15,20 @@
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
-  services.xserver.videoDrivers = [ "nvidia" ];
+  # services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.displayManager.startx.enable = true;
   services.xserver.displayManager.lightdm.enable = false;
   services.xserver.desktopManager.cinnamon.enable = false;
 
 
   hardware.graphics.enable = true;
-  hardware.nvidia.open = false;
-  hardware.nvidia.modesetting.enable = true;
-  hardware.nvidia.powerManagement.enable = false;
-  hardware.nvidia.powerManagement.finegrained = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
+  # hardware.nvidia.open = false;
+  # hardware.nvidia.modesetting.enable = true;
+  # hardware.nvidia.powerManagement.enable = false;
+  # hardware.nvidia.powerManagement.finegrained = false;
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
   # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
-  hardware.nvidia.forceFullCompositionPipeline = true;
+  # hardware.nvidia.forceFullCompositionPipeline = true;
 
   security.pam.services.swaylock = {};
   security.pam.services.hyprlock = {};

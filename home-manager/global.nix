@@ -39,7 +39,7 @@
   };
 
   home.file = {
-    # ".config/hypr/hyprland.conf".source = ./dotfiles/hypr/hyprland.conf;
+    ".config/hypr/hyprland.conf".source = ./dotfiles/hypr/hyprland.conf;
     ".config/kitty".source = ./dotfiles/kitty;
     ".config/waybar".source = ./dotfiles/waybar;
   };
