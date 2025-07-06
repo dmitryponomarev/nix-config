@@ -26,7 +26,8 @@
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = false;
   hardware.nvidia.powerManagement.finegrained = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.beta;
+  # hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
   hardware.nvidia.forceFullCompositionPipeline = true;
 
   security.pam.services.swaylock = {};
