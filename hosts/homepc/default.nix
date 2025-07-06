@@ -16,8 +16,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  services.xserver.displayManager.startx.enable = false;
-  services.xserver.displayManager.lightdm.enable = true;
+  services.xserver.displayManager.startx.enable = true;
+  services.xserver.displayManager.lightdm.enable = false;
   services.xserver.desktopManager.cinnamon.enable = false;
 
   hardware.graphics.enable = true;
@@ -29,10 +29,7 @@
 
   security.pam.services.swaylock = {};
 
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.nvidia.acceptLicense = true;
-
-  #programs.hyprland.enable = true;
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";

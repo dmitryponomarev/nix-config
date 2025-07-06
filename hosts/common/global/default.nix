@@ -42,17 +42,20 @@
   ];
 
   nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.nvidia.acceptLicense = true;
 
   environment.variables.EDITOR = "nvim";
 
   environment.systemPackages = with pkgs; [
     git
+    kitty
     home-manager
     croc
     fzf
     htop
     wget
     btop
+    neovim
   ];
 
   programs.zsh = {
@@ -68,7 +71,7 @@
 
     histSize = 1000000;
     histFile = "$HOME/.zsh_history";
-  }; 
+  };
 
   programs.gnupg.agent = {
     enable = true;

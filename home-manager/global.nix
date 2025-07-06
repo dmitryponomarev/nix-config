@@ -52,9 +52,7 @@
   # programs.neovim.enable = true;
   home.packages = with pkgs; [
     firefox
-    kitty
     mpv
-    neovim
   ];
 
   # Enable home-manager and git
