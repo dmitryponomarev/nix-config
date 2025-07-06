@@ -18,7 +18,7 @@
   services.xserver.videoDrivers = [ "nvidia" ];
   services.xserver.displayManager.startx.enable = false;
   services.xserver.displayManager.lightdm.enable = true;
-  services.xserver.desktopManager.cinnamon.enable = true;
+  services.xserver.desktopManager.cinnamon.enable = false;
 
   hardware.graphics.enable = true;
   hardware.nvidia.open = false;
@@ -32,7 +32,7 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
-  programs.hyprland.enable = true;
+  #programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
