@@ -32,6 +32,9 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
+  programs.hyprland.enable = true;
+  xwayland.enable = true;
+
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
   services.xserver.xkb.options = "eurosign:e,caps:escape";
