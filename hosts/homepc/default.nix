@@ -13,14 +13,14 @@
 
   networking.hostName = "homepc";
 
-  environment.variables = {
-    LIBVA_DRIVER_NAME = "nvidia";
-    NVD_BACKEND = "direct";
-    MOZ_DISABLE_RDD_SANDBOX = "1";
-    GBM_BACKEND = "nvidia-drm";
-    _GLX_VENDOR_LIBRARY_NAME = "nvidia";
-    WLR_DRM_NO_ATOMIC = "1";
-  };
+  # environment.variables = {
+  #   LIBVA_DRIVER_NAME = "nvidia";
+  #   NVD_BACKEND = "direct";
+  #   MOZ_DISABLE_RDD_SANDBOX = "1";
+  #   GBM_BACKEND = "nvidia-drm";
+  #   _GLX_VENDOR_LIBRARY_NAME = "nvidia";
+  #   WLR_DRM_NO_ATOMIC = "1";
+  # };
 
   # Enable the X11 windowing system.
   services.xserver.enable = true;
@@ -34,7 +34,7 @@
   hardware.nvidia.modesetting.enable = true;
   hardware.nvidia.powerManagement.enable = false;
   hardware.nvidia.powerManagement.finegrained = false;
-  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_535;
 
   security.pam.services.swaylock = {};
 
