@@ -13,15 +13,6 @@
 
   networking.hostName = "homepc";
 
-  # environment.variables = {
-  #   LIBVA_DRIVER_NAME = "nvidia";
-  #   NVD_BACKEND = "direct";
-  #   MOZ_DISABLE_RDD_SANDBOX = "1";
-  #   GBM_BACKEND = "nvidia-drm";
-  #   _GLX_VENDOR_LIBRARY_NAME = "nvidia";
-  #   WLR_DRM_NO_ATOMIC = "1";
-  # };
-
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -41,14 +32,14 @@
   nixpkgs.config.allowUnfree = true;
   nixpkgs.config.nvidia.acceptLicense = true;
 
-  #programs.hyprland.enable = true;
-  #programs.hyprland.xwayland.enable = true;
+  programs.hyprland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
   services.xserver.xkb.options = "eurosign:e,caps:escape";
 
   environment.systemPackages = with pkgs; [
+    kitty
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?

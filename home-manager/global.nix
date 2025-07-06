@@ -39,7 +39,7 @@
   };
 
   home.file = {
-    ".config/hypr/hyprland.conf".source = ./dotfiles/hypr/hyprland.conf;
+    # ".config/hypr/hyprland.conf".source = ./dotfiles/hypr/hyprland.conf;
     ".config/kitty".source = ./dotfiles/kitty;
     ".config/waybar".source = ./dotfiles/waybar;
   };
@@ -50,7 +50,7 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     firefox
     kitty
     mpv
