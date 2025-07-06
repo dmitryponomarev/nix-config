@@ -14,14 +14,14 @@
 
   # Add stuff for your user as you see fit:
   # programs.neovim.enable = true;
-  home.packages = with pkgs; [ 
+  home.packages = with pkgs; [
     grim
-    hyprland
-    hyprpicker
+    # hyprland
+    # hyprpicker
     libnotify
     slurp
     swappy
-    waybar
+    # waybar
     wf-recorder
     wl-clipboard
     steam
