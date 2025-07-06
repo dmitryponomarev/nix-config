@@ -25,8 +25,8 @@
   # Enable the X11 windowing system.
   services.xserver.enable = true;
   services.xserver.videoDrivers = [ "nvidia" ];
-  services.xserver.displayManager.startx.enable = true;
-  services.xserver.displayManager.lightdm.enable = false;
+  services.xserver.displayManager.startx.enable = false;
+  services.xserver.displayManager.lightdm.enable = true;
   services.xserver.desktopManager.cinnamon.enable = true;
 
   hardware.graphics.enable = true;
