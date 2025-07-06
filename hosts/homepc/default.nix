@@ -33,7 +33,7 @@
   nixpkgs.config.nvidia.acceptLicense = true;
 
   programs.hyprland.enable = true;
-  xwayland.enable = true;
+  programs.hyprland.xwayland.enable = true;
 
   # Configure keymap in X11
   services.xserver.xkb.layout = "se,ru";
