@@ -27,6 +27,7 @@
   hardware.nvidia.powerManagement.enable = false;
   hardware.nvidia.powerManagement.finegrained = false;
   hardware.nvidia.package = config.boot.kernelPackages.nvidiaPackages.stable;
+  hardware.nvidia.forceFullCompositionPipeline = true;
 
   security.pam.services.swaylock = {};
   security.pam.services.hyprlock = {};

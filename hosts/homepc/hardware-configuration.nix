@@ -10,9 +10,11 @@
 
   boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
-  boot.kernelParams = [ "nvidia_drm.fbdev=1" ];
+  boot.kernelParams = [ "nvidia-drm.fbdev=1" ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
+
+  kernelPackages = pkgs.linuxPackages_6_6;
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/NIXROOT";
