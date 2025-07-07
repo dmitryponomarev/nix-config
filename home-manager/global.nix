@@ -53,6 +53,7 @@
   home.packages = with pkgs; [
     firefox
     mpv
+    inputs.nixvim.packages.x86_64-linux.default
   ];
 
   # Enable home-manager and git
