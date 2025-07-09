@@ -32,6 +32,10 @@
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/homepc];
       };
+      kvm = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs outputs;};
+        modules = [./hosts/kvm];
+      };
     };
 
     # Standalone home-manager configuration entrypoint
@@ -46,6 +50,11 @@
         pkgs = nixpkgs.legacyPackages.x86_64-linux;
         extraSpecialArgs = {inherit inputs outputs;};
         modules = [./home-manager/homepc.nix];
+      };
+      "dmpo@kvm" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {inherit inputs outputs;};
+        modules = [./home-manager/kvm.nix];
       };
     };
   };
