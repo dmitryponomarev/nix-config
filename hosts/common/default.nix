@@ -7,6 +7,7 @@
       ./network.nix
       ./nix-settings.nix
       ./packages.nix
+      ./programs.nix
       ./services.nix
       ./sound.nix
       ./time_and_locale.nix
