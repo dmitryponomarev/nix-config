@@ -1,5 +1,12 @@
 { config, lib, pkgs, ... }:
 
 {
-  networking.networkmanager.enable = true;
+  networking = {
+    networkmanager.enable = true;
+    firewall = {
+      enable = true;
+      # allowedTCPPorts = [ 22 80 443 ];
+      # allowedUDPPorts = [ 53 ];
+    };
+  };
 }

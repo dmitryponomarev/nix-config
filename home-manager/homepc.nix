@@ -9,18 +9,8 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    ./global.nix
-  ];
-
-  # Add stuff for your user as you see fit:
-  # programs.neovim.enable = true;
-  home.packages = with pkgs; [
-    grim
-    libnotify
-    slurp
-    swappy
-    waybar
-    wf-recorder
-    wl-clipboard
+    ./common/global.nix
+    ./common/apps/desktop-apps.nix
+    ./common/apps/hyprland-apps.nix
   ];
 }
