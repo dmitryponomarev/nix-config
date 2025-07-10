@@ -4,25 +4,12 @@
   imports =
     [
       ./hardware-configuration.nix
-      ../common/global
+      ../common/default.nix
+      ../common/graphics/xserver.nix
+      ../common/boot/grub.nix
     ];
 
-  # Use the systemd-boot EFI boot loader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/sda";
-
-  networking.hostName = "nixlaptop";
-
-  # Enable the X11 windowing system.
-  services.xserver.enable = true;
-  services.xserver.displayManager.lightdm.enable = true;
+  networking.hostName = "homelaptop";
   services.xserver.desktopManager.cinnamon.enable = true;
-
-  hardware.graphics.enable = true;
-
-  # Configure keymap in X11
-  services.xserver.xkb.layout = "se,ru";
-  services.xserver.xkb.options = "eurosign:e,caps:escape";
-
 }
 
