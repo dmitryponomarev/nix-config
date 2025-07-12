@@ -6,25 +6,25 @@
     settings = {
       command_timeout = 2000;
       add_newline = false;
-      format = lib.concatStrings [
-        "$character"
-        "$hostname"
-        "$directory"
-        "$git_branch"
-        "$git_status"
-      ];
+      # format = lib.concatStrings [
+      #   # "$character"
+      #   "$hostname"
+      #   "$directory"
+      #   "$git_branch"
+      #   "$git_status"
+      # ];
       # right_format = lib.concatStrings [
       #   "$direnv"
       #   "$nix_shell"
       # ];
-      character = {
-        error_symbol = "[](bold red)";
-        success_symbol = "[](bold white)";
-      };
+      # character = {
+      #   error_symbol = "[](bold red)";
+      #   success_symbol = "[](bold white)";
+      # };
       username = {
         show_always = true;
-        format = "[$user]($style)";
-        style_user = "red";
+        # format = "[$user]($style)";
+        # style_user = "red";
       };
       hostname = {
         ssh_symbol = "🌐";
@@ -47,20 +47,20 @@
       #   unknown_msg = "[unknown shell](bold yellow)";
       #   format = "[$state( \($name\))](bold white)";
       # };
-      direnv = {
-        disabled = false;
-        detect_files = [".envrc"];
-        style = "bold turquoise";
-      };
-      git_branch = {
-        symbol = "";
-        format = "[$symbol $branch ]($style)";
-        style = "turquoise";
-      };
-      git_status = {
-        format = "[$all_status$ahead_behind ]($style)";
-        style = "red";
-      };
+      # direnv = {
+      #   disabled = false;
+      #   detect_files = [".envrc"];
+      #   style = "bold turquoise";
+      # };
+      # git_branch = {
+      #   symbol = "";
+      #   format = "[$symbol $branch ]($style)";
+      #   style = "turquoise";
+      # };
+      # git_status = {
+      #   format = "[$all_status$ahead_behind ]($style)";
+      #   style = "red";
+      # };
       # golang = {
       #   symbol = "";
       #   format = "[$symbol ($version) ]($style)";
