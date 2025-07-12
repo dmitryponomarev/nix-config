@@ -7,7 +7,8 @@
       layout = "se,ru";
       options = "eurosign:e,caps:escape";
     };
-    displayManager.startx.enable = true;
+    # displayManager.startx.enable = true;
+    displayManager.lightdm.enable = true;
   };
   hardware.graphics.enable = true;
 }
