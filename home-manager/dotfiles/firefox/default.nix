@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
   programs.firefox = {
     enable = true;
     profiles = {
@@ -17,9 +18,7 @@
           "browser.compactmode.show" = true;
           "browser.cache.disk.enable" = false; # Be kind to hard drive
 
-          "mousewheel.default.delta_multiplier_x" = 20;
-          "mousewheel.default.delta_multiplier_y" = 20;
-          "mousewheel.default.delta_multiplier_z" = 20;
+          "mousewheel.default.delta_multiplier_y" = 120;
 
           "ui.systemUsesDarkTheme" = 1;
 
@@ -31,7 +30,10 @@
         search = {
           force = true;
           default = "ddg";
-          order = [ "ddg" "Google" ];
+          order = [
+            "ddg"
+            "google"
+          ];
         };
       };
     };

@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     ../dotfiles/cliphist/default.nix
@@ -36,6 +37,15 @@
   home = {
     username = "dmpo";
     homeDirectory = "/home/dmpo";
+    pointerCursor = {
+      name = "Adwaita";
+      package = pkgs.adwaita-icon-theme;
+      size = 24;
+      x11 = {
+        enable = true;
+        defaultCursor = "Adwaita";
+      };
+    };
   };
 
   home.file = {

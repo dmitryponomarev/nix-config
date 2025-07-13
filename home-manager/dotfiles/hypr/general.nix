@@ -1,4 +1,4 @@
-{pkgs, ...}:
+{ pkgs, ... }:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -81,6 +81,11 @@
         vrr = 0;
         # mouse_move_enables_dpms = true;
         # key_press_enables_dpms = false;
+      };
+
+      cursor = {
+        no_hardware_cursors = 1;
+        enable_hyprcursor = false;
       };
 
       ecosystem = {
