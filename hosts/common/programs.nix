@@ -29,4 +29,32 @@
     enableSSHSupport = true;
   };
 
+  programs.firefox = {
+    enable = true;
+
+    policies = {
+      DisableTelemetry = true;
+      DisableFirefoxStudies = true;
+      DontCheckDefaultBrowser = true;
+      DisablePocket = true;
+      SearchBar = "unified";
+
+      Preferences = {
+        # Privacy settings
+        "extensions.pocket.enabled" = false;
+        "browser.topsites.contile.enabled" = false;
+        "browser.newtabpage.activity-stream.showSponsored" = false;
+        "browser.newtabpage.activity-stream.system.showSponsored" = false;
+        "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
+      };
+
+      ExtensionSettings = {
+        "uBlock0@raymondhill.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          installation_mode = "force_installed";
+        };
+      };
+    };
+  };
+
 }
