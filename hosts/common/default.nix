@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 {
   imports =
@@ -13,6 +13,7 @@
       ./time_and_locale.nix
       ./user.nix
       ./variables.nix
+      inputs.nur.modules.nixos.default
     ];
 
   system.stateVersion = "25.05";

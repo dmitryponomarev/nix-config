@@ -11,6 +11,7 @@
   imports = [
     ../dotfiles/cliphist/default.nix
     ../dotfiles/git/default.nix
+    ../dotfiles/firefox/default.nix
     ../dotfiles/keepassxc/default.nix
     ../dotfiles/mako/default.nix
     ../dotfiles/ncspot/default.nix

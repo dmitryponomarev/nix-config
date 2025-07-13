@@ -22,7 +22,7 @@
       #   success_symbol = "[](bold white)";
       # };
       username = {
-        show_always = true;
+        show_always = false;
         # format = "[$user]($style)";
         # style_user = "red";
       };
