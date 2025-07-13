@@ -11,7 +11,7 @@
     nixvim.url = "github:dc-tec/nixvim";
 
     # Hyprland
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland.url = "github:hyprwm/Hyprland";
 
   };
 
