@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   programs.zsh = {
@@ -19,6 +24,8 @@
       ls = "eza -la --group-directories-first --sort=name --time-style=long-iso";
       rm = "rm -rf";
       vim = "nvim";
+      hupdate = "home-manager switch --flake ~/nix-config#$(whoami)@$(hostname)";
+      rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#$(hostname)";
     };
 
     histSize = 1000000;
@@ -42,8 +49,8 @@
     enable = true;
 
     policies = {
-      AutofillAddressEnabled=false;
-      AutofillCreditCardEnabled=false;
+      AutofillAddressEnabled = false;
+      AutofillCreditCardEnabled = false;
       CaptivePortal = false;
       DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
