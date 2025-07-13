@@ -6,11 +6,12 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     ./common/global.nix
     ./common/apps/desktop-apps.nix
-    ./common/apps/hyprland-apps.nix
+    # ./common/apps/hyprland-apps.nix
   ];
 }
