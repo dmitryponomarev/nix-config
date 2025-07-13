@@ -13,7 +13,7 @@
       ./time_and_locale.nix
       ./user.nix
       ./variables.nix
-      inputs.nur.modules.nixos.default
+      inputs.nur.overlay
     ];
 
   system.stateVersion = "25.05";
