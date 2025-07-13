@@ -12,6 +12,7 @@
       cb = "chatblade -i -c 4o";
       cls = "clear";
       essh = "nvim ~/.ssh/config";
+      gu = "gitui";
       grep = "rg";
       hosts = "sudo nvim /etc/hosts";
       lf = "yy";
@@ -27,6 +28,14 @@
   programs.gnupg.agent = {
     enable = true;
     enableSSHSupport = true;
+  };
+
+  programs.steam = {
+    enable = true;
+  };
+
+  programs.gamescope = {
+    enable = true;
   };
 
   programs.firefox = {
