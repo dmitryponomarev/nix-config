@@ -7,9 +7,9 @@
 }: {
   imports = [
     inputs.hyprland.homeManagerModules.default
-    ../../dotfiles/general.nix
-    ../../dotfiles/binds.nix
-    ../../dotfiles/rules.nix
+    ../../dotfiles/hypr/general.nix
+    ../../dotfiles/hypr/binds.nix
+    ../../dotfiles/hypr/rules.nix
   ];
   home.packages = with pkgs; [
     grim
