@@ -21,6 +21,8 @@
           "mousewheel.default.delta_multiplier_y" = 20;
           "mousewheel.default.delta_multiplier_z" = 20;
 
+          "ui.systemUsesDarkTheme" = 1;
+
           # Firefox 75+ remembers the last workspace it was opened on as part of its session management.
           # This is annoying, because I can have a blank workspace, click Firefox from the launcher, and
           # then have Firefox open on some other workspace.
