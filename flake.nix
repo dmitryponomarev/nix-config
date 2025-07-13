@@ -10,6 +10,9 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:dc-tec/nixvim";
 
+    # Hyprland
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+
   };
 
   outputs = {
@@ -23,7 +26,6 @@
     # NixOS configuration entrypoint
     # Available through 'nixos-rebuild --flake .#your-hostname'
     nixosConfigurations = {
-      # Home laptop for watching youtube
       homelaptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs outputs;};
         modules = [./hosts/homelaptop];
@@ -38,7 +40,6 @@
       };
     };
 
-    # Standalone home-manager configuration entrypoint
     # Available through 'home-manager --flake .#your-username@your-hostname'
     homeConfigurations = {
       "dmpo@homelaptop" = home-manager.lib.homeManagerConfiguration {

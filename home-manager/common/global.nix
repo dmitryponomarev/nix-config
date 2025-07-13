@@ -39,13 +39,13 @@
   };
 
   home.file = {
-    ".config/hypr/hyprland.conf".source = ../dotfiles/hypr/hyprland.conf;
-    # ".config/kitty".source = ../dotfiles/kitty;
+    # ".config/hypr/hyprland.conf".source = ../dotfiles/hypr/hyprland.conf;
     ".config/waybar".source = ../dotfiles/waybar;
   };
 
   home.sessionVariables = {
     EDITOR = "nvim";
+    TERMINAL = "kitty";
   };
 
   programs.home-manager.enable = true;
