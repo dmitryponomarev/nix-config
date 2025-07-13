@@ -7,9 +7,9 @@
       ../common/default.nix
       ../common/boot/uefi.nix
       ../common/graphics/xserver.nix
-      # ../common/hyprland
+      ../common/hyprland
     ];
   networking.hostName = "kvm";
-  services.xserver.desktopManager.cinnamon.enable = true;
+  # services.xserver.desktopManager.cinnamon.enable = true;
 }
 
