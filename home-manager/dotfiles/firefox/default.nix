@@ -28,9 +28,6 @@
           # then have Firefox open on some other workspace.
           "widget.disable-workspace-management" = true;
         };
-        nativeMessagingHosts = [
-          pkgs.tridactyl-native
-        ];
         search = {
           force = true;
           default = "ddg";
