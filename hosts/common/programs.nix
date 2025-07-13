@@ -33,10 +33,23 @@
     enable = true;
 
     policies = {
-      DisableTelemetry = true;
+      AutofillAddressEnabled=false;
+      AutofillCreditCardEnabled=false;
+      CaptivePortal = false;
+      DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
-      DontCheckDefaultBrowser = true;
+      FeatureRecommendations = false;
+      DisableFormHistory = true;
       DisablePocket = true;
+      DisableSetDesktopBackground = true;
+      DisableTelemetry = true;
+      DontCheckDefaultBrowser = true;
+      NoDefaultBookmarks = true;
+      OfferToSaveLogins = false;
+      PasswordManagerEnabled = false;
+      PictureInPicture = false;
+      SkipTermsOfUse = true;
+      SkipOnboarding = true;
       SearchBar = "unified";
 
       Preferences = {
@@ -51,6 +64,10 @@
       ExtensionSettings = {
         "uBlock0@raymondhill.net" = {
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+          installation_mode = "force_installed";
+        };
+        "tridactyl.vim@cmcaine.co.uk" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tridactyl-vim/latest.xpi";
           installation_mode = "force_installed";
         };
       };

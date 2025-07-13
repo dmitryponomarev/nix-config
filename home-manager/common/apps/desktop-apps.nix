@@ -9,5 +9,6 @@
     firefox
     libnotify
     mpv
+    tridactyl-native
   ];
 }
