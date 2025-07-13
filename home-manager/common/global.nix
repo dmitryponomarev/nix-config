@@ -10,17 +10,18 @@
   # You can import other home-manager modules here
   imports = [
     ../dotfiles/cliphist/default.nix
-    ../dotfiles/git/default.nix
     ../dotfiles/firefox/default.nix
+    ../dotfiles/git/default.nix
     ../dotfiles/keepassxc/default.nix
+    ../dotfiles/kitty/default.nix
     ../dotfiles/mako/default.nix
     ../dotfiles/ncspot/default.nix
     ../dotfiles/starship/default.nix
     ../dotfiles/swaylock/default.nix
+    ../dotfiles/wofi/default.nix
     ../dotfiles/yazi/default.nix
     ../dotfiles/zathura/default.nix
     ../dotfiles/zsh/default.nix
-    ../dotfiles/wofi/default.nix
   ];
 
   nixpkgs = {
