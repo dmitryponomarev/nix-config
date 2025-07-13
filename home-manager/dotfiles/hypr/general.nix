@@ -12,7 +12,7 @@
       exec-once = [
         # "hyprpanel"
         # "hyprpaper"
-        # "waybar"
+        "waybar"
         "keepassxc"
         "nm-applet"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"

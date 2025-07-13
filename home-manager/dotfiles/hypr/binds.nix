@@ -1,9 +1,4 @@
-{
-  inputs,
-  pkgs,
-  lib,
-  ...
-}: {
+{ config, pkgs, lib, ... }: {
   wayland.windowManager.hyprland.settings = with pkgs; {
     "$mainMod" = "SUPER";
     # "$once-recorder" = "pgrep wf-recorder && killall -s SIGINT wf-recorder || $recorder";

@@ -1,7 +1,7 @@
-_: {
+{pkgs, ...}: {
+
   wayland.windowManager.hyprland.settings = {
     windowrulev2 = [
-      # "noshadow, floating:0"
       "center, class:^(org.keepassxc.KeePassXC)$"
       "float, title:^(trans.*)$"
       "float, class:^(org.keepassxc.KeePassXC)$"
