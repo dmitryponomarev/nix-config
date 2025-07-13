@@ -36,7 +36,7 @@
       AutofillAddressEnabled=false;
       AutofillCreditCardEnabled=false;
       CaptivePortal = false;
-      DisableFirefoxAccounts = true;
+      DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
       FeatureRecommendations = false;
       DisableFormHistory = true;
