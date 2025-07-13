@@ -12,7 +12,7 @@
       "$mainMod SHIFT, T, layoutmsg, orientationleft"
       "$mainMod SHIFT, W, exec, firefox"
       "$mainMod, A, togglespecialworkspace, board"
-      "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} --format=hex --autocopy"
+      # "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} --format=hex --autocopy"
       "$mainMod, D, exec, wofi -i -I --show drun"
       "$mainMod, E, exec, keepassxc"
       "$mainMod, F, fullscreen,"
