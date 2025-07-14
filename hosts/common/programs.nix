@@ -86,6 +86,7 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/tridactyl-vim/latest.xpi";
           installation_mode = "force_installed";
         };
+        # https://addons.mozilla.org/firefox/downloads/latest/undoclosetabbutton/latest.xpi
       };
     };
   };
