@@ -1,0 +1,9 @@
+keys:
+  - &users:
+    - &dmpo age1ntee570cf3l679gh9h8s3ckucqkfs3h0q55597xgpmue2xajmy8qr3v40x
+
+creation_rules:
+  - path_regex: secrets.yaml$
+    key_groups:
+      - age:
+          - *dmpo

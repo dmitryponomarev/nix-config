@@ -54,19 +54,30 @@
       CaptivePortal = false;
       DisableFirefoxAccounts = true;
       DisableFirefoxStudies = true;
-      FeatureRecommendations = false;
       DisableFormHistory = true;
       DisablePocket = true;
       DisableSetDesktopBackground = true;
       DisableTelemetry = true;
       DontCheckDefaultBrowser = true;
+      EnableTrackingProtection = true;
+      FeatureRecommendations = false;
       NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
       PasswordManagerEnabled = false;
       PictureInPicture = false;
-      SkipTermsOfUse = true;
-      SkipOnboarding = true;
       SearchBar = "unified";
+      SkipOnboarding = true;
+      SkipTermsOfUse = true;
+      SanitizeOnShutdown = {
+        FormData = true;
+      };
+      FirefoxHome = {
+        Highlights = false;
+        Pocket = false;
+        Snippets = false;
+        SponsporedTopSites = false;
+        SponsporedPocket = false;
+      };
 
       Preferences = {
         # Privacy settings

@@ -10,53 +10,67 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
     nixvim.url = "github:dc-tec/nixvim";
 
-    # Hyprland
-    # hyprland.url = "github:hyprwm/Hyprland";
+    # Sops
+    sops-nix.url = "github:Mic92/sops-nix";
+    sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
   };
 
-  outputs = {
-    self,
-    nixpkgs,
-    home-manager,
-    ...
-  } @ inputs: let
-    inherit (self) outputs;
-  in {
-    # NixOS configuration entrypoint
-    # Available through 'nixos-rebuild --flake .#your-hostname'
-    nixosConfigurations = {
-      homelaptop = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/homelaptop];
+  outputs =
+    {
+      self,
+      nixpkgs,
+      home-manager,
+      sops-nix,
+      ...
+    }@inputs:
+    let
+      inherit (self) outputs;
+    in
+    {
+      # NixOS configuration entrypoint
+      # Available through 'nixos-rebuild --flake .#your-hostname'
+      nixosConfigurations = {
+        homelaptop = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/homelaptop
+            sops-nix.nixosModules.sops
+          ];
+        };
+        homepc = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/homepc
+            sops-nix.nixosModules.sops
+          ];
+        };
+        kvm = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./hosts/kvm
+            sops-nix.nixosModules.sops
+          ];
+        };
       };
-      homepc = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/homepc];
-      };
-      kvm = nixpkgs.lib.nixosSystem {
-        specialArgs = {inherit inputs outputs;};
-        modules = [./hosts/kvm];
-      };
-    };
 
-    # Available through 'home-manager --flake .#your-username@your-hostname'
-    homeConfigurations = {
-      "dmpo@homelaptop" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home-manager/homelaptop.nix];
-      };
-      "dmpo@homepc" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home-manager/homepc.nix];
-      };
-      "dmpo@kvm" = home-manager.lib.homeManagerConfiguration {
-        pkgs = nixpkgs.legacyPackages.x86_64-linux;
-        extraSpecialArgs = {inherit inputs outputs;};
-        modules = [./home-manager/kvm.nix];
+      # Available through 'home-manager --flake .#your-username@your-hostname'
+      homeConfigurations = {
+        "dmpo@homelaptop" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home-manager/homelaptop.nix ];
+        };
+        "dmpo@homepc" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home-manager/homepc.nix ];
+        };
+        "dmpo@kvm" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = { inherit inputs outputs; };
+          modules = [ ./home-manager/kvm.nix ];
+        };
       };
     };
-  };
 }
