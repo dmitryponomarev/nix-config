@@ -1,4 +1,5 @@
-{ config, pkgs, ... }: {
+{ config, pkgs, ... }:
+{
 
   programs.zsh = {
     enable = true;
@@ -14,6 +15,13 @@
         fi
         rm -f -- "$tmp"
       }
-      '';
+    '';
+    plugins = [
+      {
+        name = "zsh-fzf-history-search";
+        src = pkgs.zsh-fzf-history-search;
+        file = "share/zsh-fzf-history-search/zsh-fzf-history-search.plugin.zsh";
+      }
+    ];
   };
 }
