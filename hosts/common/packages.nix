@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   environment.systemPackages = with pkgs; [
@@ -11,6 +16,7 @@
     ffmpeg
     fzf
     git
+    jq
     home-manager
     htop
     kitty
@@ -18,6 +24,7 @@
     p7zip
     ripgrep
     wget
+    wlogout
     yt-dlp
   ];
 }
