@@ -1,5 +1,5 @@
-{ config, pkgs, ... }: {
-
+{ config, pkgs, ... }:
+{
   programs.keepassxc = {
     enable = true;
     settings = {
@@ -8,12 +8,12 @@
       };
       GUI = {
         ApplicationTheme = "dark";
-	ColorPasswords = true;
-	HidePasswords = false;
+        ColorPasswords = true;
+        HidePasswords = false;
       };
       PasswordGenerator = {
         Length = 14;
-	SpecialChars = true;
+        SpecialChars = true;
       };
       Browser = {
         Enabled = true;
