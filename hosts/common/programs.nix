@@ -61,7 +61,7 @@
       DontCheckDefaultBrowser = true;
       EnableTrackingProtection = true;
       FeatureRecommendations = false;
-      NoDefaultBookmarks = true;
+      NoDefaultBookmarks = false;
       OfferToSaveLogins = false;
       PasswordManagerEnabled = false;
       PictureInPicture = false;

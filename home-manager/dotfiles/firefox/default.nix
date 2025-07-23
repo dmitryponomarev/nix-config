@@ -35,6 +35,10 @@
             "google"
           ];
         };
+        bookmarks = {
+          force = true;
+          settings = import ./bookmarks.nix;
+        };
       };
     };
   };

@@ -8,7 +8,7 @@
 {
   home.packages = with pkgs; [
     brave
-    firefox
+    # firefox
     libnotify
     mpv
   ];
