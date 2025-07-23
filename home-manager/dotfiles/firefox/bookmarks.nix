@@ -64,32 +64,66 @@
             url = "https://gubdaily.ru";
           }
           {
-            name = "Youtube";
-            url = "https://www.youtube.com";
+            name = "Sports.ru";
+            url = "https://www.sports.ru";
           }
           {
-            name = "ChatGPT";
-            url = "https://chat.openai.com";
+            name = "Expressen";
+            url = "https://www.expressen.se";
           }
           {
-            name = "GitHub";
-            url = "https://github.com";
+            name = "Aftonbladet";
+            url = "https://www.aftonbladet.se";
           }
           {
-            name = "Reddit";
-            url = "https://www.reddit.com";
+            name = "Flashback";
+            url = "https://www.flashback.org";
           }
           {
-            name = "Wiki En";
-            url = "https://en.wikipedia.org/wiki";
+            name = "SVT";
+            url = "https://www.svtplay.se";
+          }
+        ];
+      }
+      {
+        name = "Hosting";
+        bookmarks = [
+          {
+            name = "OpenWRT";
+            url = "https://openwrt.lan";
           }
           {
-            name = "Wiki Sv";
-            url = "https://sv.wikipedia.org/wiki";
+            name = "Syncthing Local";
+            url = "https://localhost:8384";
           }
           {
-            name = "Wiki Ru";
-            url = "https://ru.wikipedia.org/wiki";
+            name = "Syncthing Central";
+            url = "https://dmitryponomarev.com/syncthing";
+          }
+          {
+            name = "RuVDS";
+            url = "https://ruvds.com/ru-usd";
+          }
+        ];
+      }
+      {
+        name = "Maps";
+        bookmarks = [
+          {
+            name = "OSM";
+            url = "https://www.openstreetmap.org";
+          }
+          {
+            name = "Google Maps";
+            url = "https://wwww.google.com/maps";
+          }
+          {
+            name = "2GIS";
+            url = "https://2gis.ru/moscow";
+          }
+          {
+            name = "Hitta";
+            url = "https://hitta.se";
           }
         ];
       }
