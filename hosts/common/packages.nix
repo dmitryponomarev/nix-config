@@ -22,6 +22,7 @@
     kitty
     neovim
     p7zip
+    sops
     ripgrep
     wget
     wlogout

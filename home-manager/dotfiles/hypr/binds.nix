@@ -1,4 +1,10 @@
-{ config, pkgs, lib, ... }: {
+{
+  config,
+  pkgs,
+  lib,
+  ...
+}:
+{
   wayland.windowManager.hyprland.settings = with pkgs; {
     "$mainMod" = "SUPER";
     # "$once-recorder" = "pgrep wf-recorder && killall -s SIGINT wf-recorder || $recorder";
@@ -27,6 +33,18 @@
       # "$mainMod, R, exec, pcmanfm"
       # '', Print, exec, ${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png''
       #
+      "$mainMod, h, movefocus, l"
+      "$mainMod, l, movefocus, r"
+      "$mainMod, k, movefocus, u"
+      "$mainMod, j, movefocus, d"
+      "$mainMod SHIFT, h, resizeactive, -30 0"
+      "$mainMod SHIFT, l, resizeactive, 30 0"
+      "$mainMod SHIFT, k, resizeactive, 0 -30"
+      "$mainMod SHIFT, j, resizeactive, 0 30"
+      "$mainMod, mouse_down, workspace, e+1"
+      "$mainMod, mouse_up, workspace, e-1"
+      "CTRL ALT, L, workspace, e+1"
+      "CTRL ALT, H, workspace, e-1"
       "$mainMod, 1, workspace, 1"
       "$mainMod, 2, workspace, 2"
       "$mainMod, 3, workspace, 3"
