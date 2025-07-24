@@ -21,5 +21,17 @@
       mode = "0400";
       path = "/home/dmpo/.ssh/id_rsa";
     };
+    ed25519 = {
+      group = "users";
+      owner = "dmpo";
+      mode = "0400";
+      path = "/home/dmpo/.ssh/id_ed25519";
+    };
+    ed25519_pub = {
+      group = "users";
+      owner = "dmpo";
+      mode = "0400";
+      path = "/home/dmpo/.ssh/id_ed25519.pub";
+    };
   };
 }
