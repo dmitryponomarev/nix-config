@@ -33,5 +33,20 @@
       mode = "0400";
       path = "/home/dmpo/.ssh/id_ed25519.pub";
     };
+    syncthing_cert = {
+      group = "users";
+      owner = "dmpo";
+      mode = "0400";
+      path = "/home/dmpo/.config/syncthing/cert.pem";
+    };
+    syncthing_key = {
+      group = "users";
+      owner = "dmpo";
+      mode = "0400";
+      path = "/home/dmpo/.config/syncthing/key.pem";
+    };
+    syncthing_user = { };
+    syncthing_pass = { };
+
   };
 }

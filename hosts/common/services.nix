@@ -11,6 +11,7 @@
     ports = [ 5011 ];
     settings = {
       PasswordAuthentication = false;
+      PubkeyAuthentication = true;
       KbdInteractiveAuthentication = false;
       PermitRootLogin = "no";
       AllowUsers = [ "dmpo" ];
@@ -23,5 +24,34 @@
     enable = true;
     port = 22;
     openFirewall = true;
+  };
+
+  services.syncthing = {
+    enable = true;
+    openDefaultPorts = true;
+    dataDir = "/home/dmpo/sync";
+    user = "dmpo";
+    group = "users";
+    settings = {
+      gui = {
+        user = "admin";
+        password = "password";
+      };
+      devices = {
+        "homelaptop" = {
+          id = "JUJGU72-DAWFA5X-VF73CQ3-B52GJBA-BC7LPIS-EBXTDZL-T66UJTA-MBSDXQZ";
+        };
+      };
+      folders = {
+        "sync" = {
+          path = "/home/dmpo/sync";
+          devices = [ "homelaptop" ];
+          ignorePerms = false;
+        };
+      };
+    };
+    key = "/run/secrets/syncthing_key";
+    cert = "/run/secrets/syncthing_cert";
+    extraFlags = [ "--no-default-folder" ];
   };
 }

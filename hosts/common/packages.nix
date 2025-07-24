@@ -22,6 +22,7 @@
     htop
     kitty
     neovim
+    nettools
     p7zip
     sops
     ripgrep
