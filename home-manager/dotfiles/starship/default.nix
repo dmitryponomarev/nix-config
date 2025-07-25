@@ -62,7 +62,7 @@
         # truncation_length = 3;
         # truncation_symbol = "…/";
         read_only = "🔒";
-        style = "#${config.colorScheme.palette.base05}";
+        style = "#${config.colorScheme.palette.base06}";
         home_symbol = "~";
       };
 

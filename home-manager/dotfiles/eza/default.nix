@@ -4,6 +4,6 @@
   programs.eza = {
     enable = true;
     colors = "always";
-    # enableZshIntegration = true;
+    enableZshIntegration = false;
   };
 }
