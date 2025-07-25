@@ -1,4 +1,9 @@
-{ pkgs, ... }:
+{
+  config,
+  pkgs,
+  nix-colors,
+  ...
+}:
 {
   wayland.windowManager.hyprland = {
     settings = {
@@ -13,7 +18,7 @@
         # "hyprpanel"
         # "hyprpaper"
         "waybar"
-        "keepassxc"
+        # "keepassxc"
         "nm-applet"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
@@ -32,8 +37,8 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "rgba(dd0000e0)";
-        "col.inactive_border" = "rgba(595959aa)";
+        "col.active_border" = "rgba(${config.colorScheme.palette.base08}e0)";
+        "col.inactive_border" = "rgba(${config.colorScheme.palette.base01}e0)";
         allow_tearing = false;
         layout = "master";
       };

@@ -6,25 +6,35 @@
   ...
 }:
 {
-  imports = [./style.nix];
+  imports = [ ./style.nix ];
 
   programs.waybar = {
     enable = true;
-    settings = [{
+    settings = [
+      {
 
-      layer = "top";
-      position = "top";
-      spacing = 6;
-      modules-left = [
-        "hyprland/workspaces"
-      ];
-      modules-center = [
-        "custom/btc"
-      ];
-      modules-right = [
-        "pulseaudio", "disk#root", "disk#data", "memory", "cpu", "temperature", "battery", "clock", "tray", "custom/power"
-      ];
-      modules = {
+        layer = "top";
+        position = "top";
+        spacing = 6;
+        modules-left = [
+          "hyprland/workspaces"
+        ];
+        modules-center = [
+          "custom/btc"
+        ];
+        modules-right = [
+          "pulseaudio"
+          "disk#root"
+          "disk#data"
+          "memory"
+          "cpu"
+          "temperature"
+          "battery"
+          "clock"
+          "tray"
+          "custom/power"
+        ];
+        # modules = {
         "hyprland/workspaces" = {
           on-scroll-up = "hyprctl dispatch workspace e+1";
           on-scroll-down = "hyprctl dispatch workspace e-1";
@@ -95,7 +105,11 @@
             phone = "";
             portable = "";
             car = "";
-            default = ["🔊" "🔊" "🔊"];
+            default = [
+              "🔊"
+              "🔊"
+              "🔊"
+            ];
           };
         };
         "custom/btc" = {
@@ -104,7 +118,8 @@
           restart-interval = 30;
           exec = "curl -s 'https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd' | jq .bitcoin.usd";
         };
+        # };
       }
-    }];
+    ];
   };
 }

@@ -8,7 +8,7 @@
 
   services.hyprpaper =
     let
-      horizontalWallpaper = "~/nix-config/wallpapers/wallpaper_horizontal.jpg";
+      horizontalWallpaper = "~/nix-config/wallpapers/wallpaper.png";
     in
     {
       enable = true;

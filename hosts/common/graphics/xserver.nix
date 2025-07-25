@@ -1,4 +1,9 @@
-{ config, lib, pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
   services.xserver = {
@@ -7,8 +12,8 @@
       layout = "se,ru";
       options = "eurosign:e,caps:escape";
     };
-    displayManager.startx.enable = false;
-    displayManager.lightdm.enable = true;
+    displayManager.startx.enable = true;
+    displayManager.lightdm.enable = false;
   };
   hardware.graphics.enable = true;
 }

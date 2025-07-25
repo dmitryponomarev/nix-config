@@ -23,6 +23,7 @@
     ../dotfiles/swaylock/default.nix
     ../dotfiles/wofi/default.nix
     ../dotfiles/yazi/default.nix
+    ../dotfiles/waybar/default.nix
     ../dotfiles/zathura/default.nix
     ../dotfiles/zsh/default.nix
   ];
@@ -51,8 +52,7 @@
   };
 
   home.file = {
-    # ".config/hypr/hyprland.conf".source = ../dotfiles/hypr/hyprland.conf;
-    ".config/waybar".source = ../dotfiles/waybar;
+    ".config/waybar/scripts".source = ../dotfiles/waybar/scripts;
   };
 
   home.sessionVariables = {

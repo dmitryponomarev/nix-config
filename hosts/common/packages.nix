@@ -19,6 +19,7 @@
     git
     jq
     home-manager
+    hyprpicker
     htop
     kitty
     neovim
