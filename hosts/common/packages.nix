@@ -20,6 +20,7 @@
     jq
     home-manager
     hyprpicker
+    ouch
     htop
     kitty
     neovim
@@ -29,6 +30,7 @@
     ripgrep
     wget
     wlogout
+    yaziPlugins.ouch
     yt-dlp
   ];
 }
