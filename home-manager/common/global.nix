@@ -11,6 +11,7 @@
   # You can import other home-manager modules here
   imports = [
     ../dotfiles/cliphist/default.nix
+    ../dotfiles/eza/default.nix
     ../dotfiles/firefox/default.nix
     ../dotfiles/git/default.nix
     ../dotfiles/keepassxc/default.nix

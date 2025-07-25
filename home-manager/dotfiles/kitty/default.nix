@@ -11,6 +11,7 @@ in
 {
   programs.kitty = {
     enable = true;
+    themeFile  = "gruvbox-dark-hard";
     settings = {
       font_family = "Fira Code";
       bold_font = "auto";
@@ -22,7 +23,7 @@ in
       confirms_os_window_close = 0;
       background_opacity = 0.8;
       kitty_mod = "ctrl+shift";
-      background = "#${config.colorScheme.palette.base00}";
+      # background = "#${config.colorScheme.palette.base00}";
     };
     keybindings = {
       "kitty_mod+equal" = "change_font_size all 0";

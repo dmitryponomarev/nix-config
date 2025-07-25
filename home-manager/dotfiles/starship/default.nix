@@ -26,7 +26,8 @@
 
       username = {
         show_always = false;
-        style = "#${config.colorScheme.palette.base0E}";
+        style_user = "#${config.colorScheme.palette.base0E}";
+        style_root = "#${config.colorScheme.palette.base0E}";
       };
 
       hostname = {
