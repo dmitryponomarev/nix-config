@@ -30,7 +30,7 @@
       "ALT, L, workspace, m+1"
       "ALT, Tab, togglespecialworkspace, magic"
       "$mainMod SHIFT, S, exec, grim -g $(slurp) - | swappy -f -"
-      "$mainMod SHIFT, Home, swaylock"
+      "$mainMod SHIFT, Home, exec, swaylock"
       "$mainMod SHIFT, F, fullscreenstate, 0 3"
       # "$mainMod, R, exec, pcmanfm"
       # '', Print, exec, ${lib.getExe grim} -g "$(${lib.getExe slurp})" - | ${lib.getExe satty} -f - --fullscreen --output-filename ~/Pictures/screenshots/$(date '+%Y%m%d-%H:%M:%S').png''
