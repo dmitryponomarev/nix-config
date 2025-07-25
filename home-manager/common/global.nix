@@ -17,6 +17,7 @@
     ../dotfiles/kitty/default.nix
     ../dotfiles/mako/default.nix
     ../dotfiles/ncspot/default.nix
+    ../dotfiles/nix-colors/default.nix
     ../dotfiles/starship/default.nix
     ../dotfiles/swaylock/default.nix
     ../dotfiles/wofi/default.nix

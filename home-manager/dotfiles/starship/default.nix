@@ -2,6 +2,7 @@
   config,
   pkgs,
   lib,
+  nix-colors,
   ...
 }:
 {
@@ -25,26 +26,23 @@
 
       username = {
         show_always = false;
-        # format = "[$user]($style)";
-        # style_user = "red";
+        style = "#${config.colorScheme.palette.base0E}";
       };
 
       hostname = {
         disabled = true;
         ssh_only = false;
-        style = "bg:rosewater fg:base";
+        style = "#${config.colorScheme.palette.base09}";
         format = "[ $hostname ]($style)";
       };
 
       git_branch = {
-        # style = "bg:sky fg:base";
-        style = "fg:green";
+        style = "#${config.colorScheme.palette.base0B}";
         format = "[ $symbol$branch ]($style)";
       };
 
       git_status = {
-        style = "fg:red";
-        # format = "[$all_status$ahead_behind ]($style)";
+        style = "#${config.colorScheme.palette.base08}";
       };
 
       cmd_duration = {
@@ -63,7 +61,7 @@
         # truncation_length = 3;
         # truncation_symbol = "…/";
         read_only = "🔒";
-        style = "blue";
+        style = "#${config.colorScheme.palette.base05}";
         home_symbol = "~";
       };
 

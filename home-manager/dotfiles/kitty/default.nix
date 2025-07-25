@@ -1,4 +1,9 @@
-{ config, pkgs, ... }:
+{
+  config,
+  pkgs,
+  nix-colors,
+  ...
+}:
 
 let
   hints_alphabet = "jfkdlsahgurieowpq";
@@ -17,13 +22,18 @@ in
       confirms_os_window_close = 0;
       background_opacity = 0.8;
       kitty_mod = "ctrl+shift";
+      background = "#${config.colorScheme.palette.base00}";
     };
     keybindings = {
       "kitty_mod+equal" = "change_font_size all 0";
-      "kitty_mod+l" = "kitten hints --type line --program - --alphabet=${hints_alphabet} --hints-text-color=orange";
-      "kitty_mod+o" = "kitten hints --type line --program wl-copy --alphabet=${hints_alphabet} --hints-text-color=orange";
-      "kitty_mod+p" = "kitten hints --type word --program - --alphabet=${hints_alphabet} --hints-text-color=orange";
-      "kitty_mod+u" = "kitten hints --type word --program wl-copy --alphabet=${hints_alphabet} --hints-text-color=orange";
+      "kitty_mod+l" =
+        "kitten hints --type line --program - --alphabet=${hints_alphabet} --hints-text-color=orange";
+      "kitty_mod+o" =
+        "kitten hints --type line --program wl-copy --alphabet=${hints_alphabet} --hints-text-color=orange";
+      "kitty_mod+p" =
+        "kitten hints --type word --program - --alphabet=${hints_alphabet} --hints-text-color=orange";
+      "kitty_mod+u" =
+        "kitten hints --type word --program wl-copy --alphabet=${hints_alphabet} --hints-text-color=orange";
     };
   };
 }

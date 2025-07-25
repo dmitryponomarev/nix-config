@@ -10,6 +10,7 @@
     ../../dotfiles/hypr/general.nix
     ../../dotfiles/hypr/binds.nix
     ../../dotfiles/hypr/rules.nix
+    ../../dotfiles/hyprpaper
   ];
 
   wayland.windowManager.hyprland.enable = true;
