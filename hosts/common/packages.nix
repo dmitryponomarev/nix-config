@@ -24,6 +24,7 @@
     htop
     kitty
     neovim
+    neofetch
     nettools
     p7zip
     sops
