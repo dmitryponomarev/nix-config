@@ -8,7 +8,7 @@
 {
   home.packages = with pkgs; [
     brave
-    # firefox
+    telegram-desktop
     libnotify
     mpv
   ];

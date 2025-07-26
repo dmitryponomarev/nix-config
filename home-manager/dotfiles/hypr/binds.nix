@@ -39,10 +39,6 @@
       "$mainMod, l, movefocus, r"
       "$mainMod, k, movefocus, u"
       "$mainMod, j, movefocus, d"
-      "$mainMod SHIFT, h, resizeactive, -30 0"
-      "$mainMod SHIFT, l, resizeactive, 30 0"
-      "$mainMod SHIFT, k, resizeactive, 0 -30"
-      "$mainMod SHIFT, j, resizeactive, 0 30"
       "$mainMod, mouse_down, workspace, e+1"
       "$mainMod, mouse_up, workspace, e-1"
       "CTRL ALT, L, workspace, e+1"
@@ -67,6 +63,12 @@
       "$mainMod SHIFT, 8, movetoworkspace, 8"
       "$mainMod SHIFT, 9, movetoworkspace, 9"
       "$mainMod SHIFT, 0, movetoworkspace, 10"
+    ];
+    binde = [
+      "$mainMod SHIFT, h, resizeactive, -30 0"
+      "$mainMod SHIFT, l, resizeactive, 30 0"
+      "$mainMod SHIFT, k, resizeactive, 0 -30"
+      "$mainMod SHIFT, j, resizeactive, 0 30"
     ];
     bindm = [
       "$mainMod, mouse:272, movewindow"
