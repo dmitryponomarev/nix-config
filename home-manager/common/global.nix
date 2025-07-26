@@ -37,6 +37,8 @@
     };
   };
 
+  xdg.userDirs.enable = false;
+
   home = {
     username = "dmpo";
     homeDirectory = "/home/dmpo";
