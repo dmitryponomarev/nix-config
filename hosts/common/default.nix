@@ -19,6 +19,7 @@
     ./time_and_locale.nix
     ./user.nix
     ./environment.nix
+    ./virtualisation.nix
   ];
 
   system.stateVersion = "25.05";
