@@ -8,7 +8,10 @@
     # Home manager
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
-    nixvim.url = "github:dc-tec/nixvim";
+    nixvim = {
+      url = "github:nix-community/nixvim/nixos-25.05";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # nix-colors
     nix-colors.url = "github:misterio77/nix-colors";
