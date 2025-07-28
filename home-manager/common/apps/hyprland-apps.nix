@@ -11,6 +11,7 @@
     ../../dotfiles/hypr/binds.nix
     ../../dotfiles/hypr/rules.nix
     ../../dotfiles/hyprpaper
+    ../../dotfiles/wlogout
   ];
 
   wayland.windowManager.hyprland.enable = true;

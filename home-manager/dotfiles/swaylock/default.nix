@@ -1,14 +1,13 @@
 { config, pkgs, ... }: {
 
   programs.swaylock = {
+    package = pkgs.swaylock-effects;
     enable = true;
     settings = {
-      color = "000000";
-      line-color = "000000";
-      indicator-radius = 100;
-      indicator-idle-visible = false;
-      font-size = 24;
-      show-failed-attempts = true;
+      image = ../../../wallpapers/wallpaper.png;
+      effect-greyscale = true;
+      effect-vignette = "0.3:0.8";
+      effect-blur = "3x3";
     };
   };
 }

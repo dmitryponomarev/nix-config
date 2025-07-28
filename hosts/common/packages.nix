@@ -30,7 +30,7 @@
     sops
     ripgrep
     wget
-    wlogout
+    # wlogout
     yaziPlugins.ouch
     yt-dlp
   ];
