@@ -1,7 +1,21 @@
 { lib, config, ... } : {
 
   opts = {
-    autoindent = false;
+    breakindent = true;
+    colorcolumn = "100";
+    copyindent = true;
+    cursorcolumn = true;
+    cursorline = true;
+    fileencoding = "utf-8";
+    history = 200;
+    lazyredraw = false;
+    showmatch = true;
+    splitbelow = true;
+    splitright = true;
+    textwidth = 0;
+    undofile = true;
+    # listchars = "tab:▸·,extends:⇉,precedes:⇇,nbsp:·,eol:↵,trail:␣";
+    autoindent = true;
     backspace = "indent,eol,start";
     backup = false;
     clipboard = "unnamedplus";
@@ -14,19 +28,18 @@
     joinspaces = false;
     laststatus = 3;
     list = true;
-    # listchars = "tab:▸·,extends:⇉,precedes:⇇,nbsp:·,eol:↵,trail:␣";
     number = true;
     relativenumber = true;
     scrolloff = 4;
     shiftround = true;
-    shiftwidth = 4;
+    shiftwidth = 2;
     signcolumn = "yes";
     smartcase = true;
     smartindent = true;
     smarttab = true;
-    softtabstop = 4;
+    softtabstop = 0;
     swapfile = false;
-    tabstop = 4;
+    tabstop = 2;
     termguicolors = true;
     wrap = false;
   };

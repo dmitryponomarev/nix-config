@@ -8,11 +8,11 @@
       underline = true;
       bold = true;
       italic = {
-	strings = false;
-	emphasis = true;
-	comments = true;
-	operators = false;
-	folds = true;
+		strings = false;
+		emphasis = true;
+		comments = true;
+		operators = false;
+		folds = true;
       };
       strikethrough = true;
       invert_selection = false;
