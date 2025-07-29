@@ -22,7 +22,7 @@
       # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0440";
+      mode = "0400";
       path = "/home/dmpo/.ssh/id_rsa";
     };
     ed25519 = {
@@ -30,7 +30,7 @@
       # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0440";
+      mode = "0400";
       path = "/home/dmpo/.ssh/id_ed25519";
     };
     ed25519_pub = {
@@ -38,7 +38,7 @@
       # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0440";
+      mode = "0400";
       path = "/home/dmpo/.ssh/id_ed25519.pub";
     };
     syncthing_cert = {
@@ -46,7 +46,7 @@
       # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0440";
+      mode = "0400";
       path = "/home/dmpo/.config/syncthing/cert.pem";
     };
     syncthing_key = {
@@ -54,7 +54,7 @@
       # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0440";
+      mode = "0400";
       path = "/home/dmpo/.config/syncthing/key.pem";
     };
     syncthing_user = { };
