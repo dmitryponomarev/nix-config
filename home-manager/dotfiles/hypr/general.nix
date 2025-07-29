@@ -37,7 +37,7 @@
         gaps_in = 5;
         gaps_out = 10;
         border_size = 2;
-        "col.active_border" = "rgba(${config.colorScheme.palette.base0F}e0)";
+        "col.active_border" = "rgba(${config.colorScheme.palette.base0D}e0)";
         "col.inactive_border" = "rgba(${config.colorScheme.palette.base01}e0)";
         allow_tearing = false;
         layout = "master";

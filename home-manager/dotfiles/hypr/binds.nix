@@ -29,7 +29,7 @@
       "ALT, H, workspace, m-1"
       "ALT, L, workspace, m+1"
       "ALT, Tab, togglespecialworkspace, magic"
-      "$mainMod SHIFT, S, exec, grim -g $(slurp) - | swappy -f -"
+      "$mainMod SHIFT, S, exec, grim -g \"$(slurp)\" - | swappy -f -"
       "$mainMod SHIFT, Home, exec, swaylock"
       "$mainMod SHIFT, F, fullscreenstate, 0 3"
       # "$mainMod, R, exec, pcmanfm"

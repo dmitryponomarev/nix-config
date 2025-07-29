@@ -11,5 +11,6 @@
     telegram-desktop
     libnotify
     mpv
+    gimp
   ];
 }
