@@ -10,51 +10,39 @@
   sops.age.keyFile = "/home/dmpo/.config/sops/age/keys.txt";
   sops.secrets = {
     ssh_config = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
       path = "/home/dmpo/.ssh/config";
       mode = "0600";
     };
     id_rsa = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
       mode = "0400";
       path = "/home/dmpo/.ssh/id_rsa";
     };
     ed25519 = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
       mode = "0400";
       path = "/home/dmpo/.ssh/id_ed25519";
     };
     ed25519_pub = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
       mode = "0400";
       path = "/home/dmpo/.ssh/id_ed25519.pub";
     };
     syncthing_cert = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0400";
+      mode = "0640";
       path = "/home/dmpo/.config/syncthing/cert.pem";
     };
     syncthing_key = {
-      # group = "users";
-      # owner = "dmpo";
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      mode = "0400";
+      mode = "0640";
       path = "/home/dmpo/.config/syncthing/key.pem";
     };
     syncthing_user = { };
