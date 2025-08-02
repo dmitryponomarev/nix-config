@@ -24,7 +24,7 @@
       ls = "eza -la --group-directories-first --sort=name --time-style=long-iso";
       rm = "rm -rf";
       vim = "nvim";
-      hupdate = "home-manager switch --flake ~/nix-config#$(whoami)@$(hostname)";
+      hupdate = "home-manager switch -b backup --flake ~/nix-config#$(whoami)@$(hostname)";
       rebuild = "sudo nixos-rebuild switch --flake ~/nix-config#$(hostname)";
     };
 

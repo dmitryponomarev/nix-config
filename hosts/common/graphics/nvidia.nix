@@ -11,7 +11,7 @@
     powerManagement.enable = false;
     powerManagement.finegrained = false;
     nvidiaSettings = true;
-    nvidiaPersistenced = true;
+    # nvidiaPersistenced = true;
     forceFullCompositionPipeline = true;
     package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
