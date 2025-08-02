@@ -2,7 +2,7 @@
 {
   boot = {
     plymouth = {
-      enable = true;
+      enable = false;
       theme = "hexa_retro";
       themePackages = with pkgs; [
         # By default we would install all themes

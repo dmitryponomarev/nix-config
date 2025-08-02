@@ -16,6 +16,7 @@
     # ../common/graphics/nvidia.nix
   ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "homepc";
   services.xserver.desktopManager.cinnamon.enable = false;
 }

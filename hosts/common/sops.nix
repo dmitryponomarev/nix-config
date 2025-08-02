@@ -7,13 +7,13 @@
 
 {
   sops.defaultSopsFile = ../../secrets.yaml;
-  sops.age.keyFile = "/home/dmpo/.config/sops/age/keys.txt";
+  sops.age.keyFile = "/var/lib/age/keys.txt";
   sops.secrets = {
     ssh_config = {
       group = config.users.users.dmpo.group;
       owner = config.users.users.dmpo.name;
-      path = "/home/dmpo/.ssh/config";
       mode = "0600";
+      path = "/home/dmpo/.ssh/config";
     };
     id_rsa = {
       group = config.users.users.dmpo.group;
@@ -34,18 +34,16 @@
       path = "/home/dmpo/.ssh/id_ed25519.pub";
     };
     syncthing_cert = {
-      group = config.users.users.dmpo.group;
-      owner = config.users.users.dmpo.name;
-      mode = "0640";
       path = "/home/dmpo/.config/syncthing/cert.pem";
     };
     syncthing_key = {
-      group = config.users.users.dmpo.group;
-      owner = config.users.users.dmpo.name;
-      mode = "0640";
       path = "/home/dmpo/.config/syncthing/key.pem";
     };
     syncthing_user = { };
     syncthing_pass = { };
   };
+
+  systemd.tmpfiles.rules = [
+    "f ${config.sops.age.keyFile} 0640 root root"
+  ];
 }
