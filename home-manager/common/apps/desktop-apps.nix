@@ -7,10 +7,12 @@
 }:
 {
   home.packages = with pkgs; [
+    audacity
     brave
     telegram-desktop
     libnotify
     mpv
     gimp
+    qbittorrent
   ];
 }
