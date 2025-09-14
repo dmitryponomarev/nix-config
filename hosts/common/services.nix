@@ -49,6 +49,6 @@
     };
     key = "/run/secrets/syncthing_key";
     cert = "/run/secrets/syncthing_cert";
-    extraFlags = [ "--no-default-folder" ];
+    # extraFlags = [ "--no-default-folder" ];
   };
 }
