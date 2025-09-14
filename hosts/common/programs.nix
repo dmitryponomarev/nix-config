@@ -101,6 +101,14 @@
           install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
           installation_mode = "force_installed";
         };
+        "simple-translate@sienori" = {
+          installation_mode = "force_installed";
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-translate/latest.xpi";
+        };
+        "firefox@tampermonkey.net" = {
+          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
+          installation_mode = "force_installed";
+        };
         # https://addons.mozilla.org/firefox/downloads/latest/undoclosetabbutton/latest.xpi
       };
     };
