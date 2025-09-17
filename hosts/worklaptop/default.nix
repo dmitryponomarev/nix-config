@@ -19,4 +19,5 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
   networking.hostName = "SE-LT-000003";
   services.xserver.desktopManager.cinnamon.enable = false;
+  time.hardwareClockInLocalTime = true;
 }
