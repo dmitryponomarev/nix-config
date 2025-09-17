@@ -68,6 +68,16 @@
             sops-nix.nixosModules.sops
           ];
         };
+        worklaptop = nixpkgs.lib.nixosSystem {
+          specialArgs = {
+            inherit inputs outputs;
+            inherit nix-colors;
+          };
+          modules = [
+            ./hosts/worklaptop
+            sops-nix.nixosModules.sops
+          ];
+        };
       };
 
       # Available through 'home-manager --flake .#your-username@your-hostname'
@@ -95,6 +105,14 @@
             inherit nix-colors;
           };
           modules = [ ./home-manager/kvm.nix ];
+        };
+        "dmpo@worklaptop" = home-manager.lib.homeManagerConfiguration {
+          pkgs = nixpkgs.legacyPackages.x86_64-linux;
+          extraSpecialArgs = {
+            inherit inputs outputs;
+            inherit nix-colors;
+          };
+          modules = [ ./home-manager/worklaptop.nix ];
         };
       };
     };
