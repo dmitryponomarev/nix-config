@@ -75,9 +75,9 @@
         special_scale_factor = 0.95;
       };
 
-      gestures = {
-        workspace_swipe = false;
-      };
+      # gestures = {
+      #   workspace_swipe = false;
+      # };
 
       misc = {
         disable_hyprland_logo = true;

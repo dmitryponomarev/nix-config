@@ -68,13 +68,13 @@
             sops-nix.nixosModules.sops
           ];
         };
-        worklaptop = nixpkgs.lib.nixosSystem {
+        SE-LT-000003 = nixpkgs.lib.nixosSystem {
           specialArgs = {
             inherit inputs outputs;
             inherit nix-colors;
           };
           modules = [
-            ./hosts/worklaptop
+            ./hosts/SE-LT-000003
             sops-nix.nixosModules.sops
           ];
         };
@@ -106,13 +106,13 @@
           };
           modules = [ ./home-manager/kvm.nix ];
         };
-        "dmpo@worklaptop" = home-manager.lib.homeManagerConfiguration {
+        "dmpo@SE-LT-000003" = home-manager.lib.homeManagerConfiguration {
           pkgs = nixpkgs.legacyPackages.x86_64-linux;
           extraSpecialArgs = {
             inherit inputs outputs;
             inherit nix-colors;
           };
-          modules = [ ./home-manager/worklaptop.nix ];
+          modules = [ ./home-manager/SE-LT-000003.nix ];
         };
       };
     };

@@ -22,6 +22,7 @@
       hosts = "sudo nvim /etc/hosts";
       lf = "yy";
       ls = "eza -la --group-directories-first --sort=name --time-style=long-iso";
+      pm = "pulsemixer";
       rm = "rm -rf";
       vim = "nvim";
       hupdate = "home-manager switch -b backup --flake ~/nix-config#$(whoami)@$(hostname)";

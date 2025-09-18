@@ -9,6 +9,7 @@
   imports = [
     ./hardware-configuration.nix
     ../common/default.nix
+    ../common/bluetooth.nix
     ../common/graphics/xserver.nix
     ../common/hyprland
     ../common/boot/uefi.nix

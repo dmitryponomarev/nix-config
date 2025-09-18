@@ -26,6 +26,8 @@
     openFirewall = true;
   };
 
+  services.blueman.enable = true;
+
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;

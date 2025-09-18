@@ -22,6 +22,9 @@
         wallpaper = [
           "HDMI-A-1,${horizontalWallpaper}"
           "DP-1,${horizontalWallpaper}"
+          "DP-5,${horizontalWallpaper}"
+          "DP-7,${horizontalWallpaper}"
+          "eDP-1,${horizontalWallpaper}"
         ];
       };
     };
