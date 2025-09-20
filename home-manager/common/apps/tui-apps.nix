@@ -14,6 +14,11 @@
     azure-cli
     lshw
     pulsemixer
+    dos2unix
+    difftastic
+    tmux
+    unzip
+    scanmem
   ];
 
 }

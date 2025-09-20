@@ -20,6 +20,7 @@
         "waybar"
         # "keepassxc"
         "nm-applet"
+        "blueman-applet"
         "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
       ];
 

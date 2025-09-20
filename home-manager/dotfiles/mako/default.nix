@@ -5,7 +5,6 @@
   ...
 }:
 {
-
   services.mako = {
     enable = true;
     settings = {
@@ -18,6 +17,7 @@
       height = 200;
       margin = 20;
       font = "FiraCode 1o";
+      default-timeout = 12000;
     };
   };
 }

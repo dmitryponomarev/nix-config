@@ -9,8 +9,10 @@
   home.packages = with pkgs; [
     audacity
     brave
+    dbeaver-bin
     telegram-desktop
     libnotify
+    remmina
     mpv
     gimp
     qbittorrent

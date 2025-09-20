@@ -28,6 +28,11 @@
 
   services.blueman.enable = true;
 
+  services.locate = {
+    enable = true;
+    interval = "hourly";
+  };
+
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
