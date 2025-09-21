@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.firefox = {
     enable = true;
     profiles = {
@@ -35,10 +38,10 @@
             "google"
           ];
         };
-        bookmarks = {
-          force = true;
-          settings = import ./bookmarks.nix;
-        };
+        # bookmarks = {
+        #   force = true;
+        #   settings = import ./bookmarks.nix;
+        # };
       };
     };
   };

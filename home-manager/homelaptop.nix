@@ -12,5 +12,4 @@
     ./common/global.nix
     ./common/apps/desktop-apps.nix
   ];
-
 }

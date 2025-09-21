@@ -4,8 +4,7 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     ../../dotfiles/hypr/general.nix
     ../../dotfiles/hypr/binds.nix
@@ -25,5 +24,4 @@
     wf-recorder
     wl-clipboard
   ];
-
 }

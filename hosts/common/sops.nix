@@ -39,6 +39,12 @@
     syncthing_key = {
       path = "/home/dmpo/.config/syncthing/key.pem";
     };
+    openai_api_key = {
+      group = config.users.users.dmpo.group;
+      owner = config.users.users.dmpo.name;
+      mode = "0440";
+      path = "/home/dmpo/.config/secrets/openai_api_key.txt";
+    };
     syncthing_user = { };
     syncthing_pass = { };
   };

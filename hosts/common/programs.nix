@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
@@ -53,7 +51,7 @@
       AutofillAddressEnabled = false;
       AutofillCreditCardEnabled = false;
       CaptivePortal = false;
-      DisableFirefoxAccounts = true;
+      DisableFirefoxAccounts = false;
       DisableFirefoxStudies = true;
       DisableFormHistory = true;
       DisablePocket = true;
@@ -62,7 +60,7 @@
       DontCheckDefaultBrowser = true;
       EnableTrackingProtection = true;
       FeatureRecommendations = false;
-      NoDefaultBookmarks = false;
+      NoDefaultBookmarks = true;
       OfferToSaveLogins = false;
       PasswordManagerEnabled = false;
       PictureInPicture = false;
@@ -89,29 +87,28 @@
         "browser.newtabpage.activity-stream.showSponsoredTopSites" = false;
       };
 
-      ExtensionSettings = {
-        "uBlock0@raymondhill.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "tridactyl.vim@cmcaine.co.uk" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tridactyl-vim/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "keepassxc-browser@keepassxc.org" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        "simple-translate@sienori" = {
-          installation_mode = "force_installed";
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-translate/latest.xpi";
-        };
-        "firefox@tampermonkey.net" = {
-          install_url = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
-          installation_mode = "force_installed";
-        };
-        # https://addons.mozilla.org/firefox/downloads/latest/undoclosetabbutton/latest.xpi
-      };
+      # ExtensionSettings = {
+      #   "uBlock0@raymondhill.net" = {
+      #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/ublock-origin/latest.xpi";
+      #     installation_mode = "force_installed";
+      #   };
+      #   "tridactyl.vim@cmcaine.co.uk" = {
+      #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/tridactyl-vim/latest.xpi";
+      #     installation_mode = "force_installed";
+      #   };
+      #   "keepassxc-browser@keepassxc.org" = {
+      #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/keepassxc-browser/latest.xpi";
+      #     installation_mode = "force_installed";
+      #   };
+      #   "simple-translate@sienori" = {
+      #     installation_mode = "force_installed";
+      #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/simple-translate/latest.xpi";
+      #   };
+      #   "firefox@tampermonkey.net" = {
+      #     install_url = "https://addons.mozilla.org/firefox/downloads/latest/tampermonkey/latest.xpi";
+      #     installation_mode = "force_installed";
+      #   };
+      # };
     };
   };
 }

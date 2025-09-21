@@ -4,21 +4,29 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
 
   home.packages = with pkgs; [
+    alejandra
     azure-cli
-    lshw
-    pulsemixer
-    dos2unix
+    deadnix
     difftastic
+    dos2unix
+    htmlhint
+    lshw
+    markdownlint-cli
+    mypy
+    prettierd
+    pulsemixer
+    scanmem
+    stylua
+    ruff
     tmux
     unzip
-    scanmem
+    yamlfmt
+    yamllint
   ];
-
 }
