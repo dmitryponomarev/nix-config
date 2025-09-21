@@ -9,24 +9,13 @@
 }: {
   # You can import other home-manager modules here
   imports = [
-    ../dotfiles/cliphist/default.nix
     ../dotfiles/eza/default.nix
-    ../dotfiles/firefox/default.nix
     ../dotfiles/git/default.nix
-    ../dotfiles/keepassxc/default.nix
     ../dotfiles/kitty/default.nix
-    ../dotfiles/mako/default.nix
-    ../dotfiles/ncspot/default.nix
-    # ../dotfiles/npm/default.nix
-    ../dotfiles/swappy/default.nix
     ../dotfiles/nixvim/default.nix
     ../dotfiles/nix-colors/default.nix
     ../dotfiles/starship/default.nix
-    ../dotfiles/swaylock/default.nix
-    ../dotfiles/wofi/default.nix
     ../dotfiles/yazi/default.nix
-    ../dotfiles/waybar/default.nix
-    ../dotfiles/zathura/default.nix
     ../dotfiles/zsh/default.nix
   ];
 
@@ -40,17 +29,6 @@
   };
 
   xdg.userDirs.enable = false;
-
-  xdg.mimeApps = {
-    enable = true;
-    defaultApplications = {
-      "default-web-browser" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/about" = ["firefox.desktop"];
-    };
-  };
 
   home = {
     username = "dmpo";
@@ -66,16 +44,9 @@
     };
   };
 
-  home.file = {
-    ".config/waybar/scripts".source = ../dotfiles/waybar/scripts;
-  };
-
   home.sessionVariables = {
     EDITOR = "nvim";
     TERMINAL = "kitty";
-    XDG_SESSION_TYPE = "wayland";
-    NIXOS_OZONE_WL = "1";
-    MOZ_ENABLE_WAYLAND = "1";
   };
 
   programs.home-manager.enable = true;

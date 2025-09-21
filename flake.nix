@@ -19,101 +19,115 @@
     # Sops
     sops-nix.url = "github:Mic92/sops-nix";
     sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-
   };
 
-  outputs =
-    {
-      self,
-      nixpkgs,
-      home-manager,
-      sops-nix,
-      nix-colors,
-      ...
-    }@inputs:
-    let
-      inherit (self) outputs;
-    in
-    {
-      # NixOS configuration entrypoint
-      # Available through 'nixos-rebuild --flake .#your-hostname'
-      nixosConfigurations = {
-        homelaptop = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [
-            ./hosts/homelaptop
-            sops-nix.nixosModules.sops
-          ];
+  outputs = {
+    self,
+    nixpkgs,
+    home-manager,
+    sops-nix,
+    nix-colors,
+    ...
+  } @ inputs: let
+    inherit (self) outputs;
+  in {
+    # NixOS configuration entrypoint
+    # Available through 'nixos-rebuild --flake .#your-hostname'
+    nixosConfigurations = {
+      homelaptop = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
         };
-        homepc = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [
-            ./hosts/homepc
-            sops-nix.nixosModules.sops
-          ];
-        };
-        kvm = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [
-            ./hosts/kvm
-            sops-nix.nixosModules.sops
-          ];
-        };
-        SE-LT-000003 = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [
-            ./hosts/SE-LT-000003
-            sops-nix.nixosModules.sops
-          ];
-        };
+        modules = [
+          ./hosts/homelaptop
+          sops-nix.nixosModules.sops
+        ];
       };
-
-      # Available through 'home-manager --flake .#your-username@your-hostname'
-      homeConfigurations = {
-        "dmpo@homelaptop" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [ ./home-manager/homelaptop.nix ];
+      homepc = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
         };
-        "dmpo@homepc" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [ ./home-manager/homepc.nix ];
+        modules = [
+          ./hosts/homepc
+          sops-nix.nixosModules.sops
+        ];
+      };
+      kvm = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
         };
-        "dmpo@kvm" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [ ./home-manager/kvm.nix ];
+        modules = [
+          ./hosts/kvm
+          sops-nix.nixosModules.sops
+        ];
+      };
+      SE-LT-000003 = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
         };
-        "dmpo@SE-LT-000003" = home-manager.lib.homeManagerConfiguration {
-          pkgs = nixpkgs.legacyPackages.x86_64-linux;
-          extraSpecialArgs = {
-            inherit inputs outputs;
-            inherit nix-colors;
-          };
-          modules = [ ./home-manager/SE-LT-000003.nix ];
+        modules = [
+          ./hosts/SE-LT-000003
+          sops-nix.nixosModules.sops
+        ];
+      };
+      nix-main = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
         };
+        modules = [
+          ./hosts/nix-main
+          sops-nix.nixosModules.sops
+        ];
       };
     };
+
+    # Available through 'home-manager --flake .#your-username@your-hostname'
+    homeConfigurations = {
+      "dmpo@homelaptop" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
+        };
+        modules = [./home-manager/homelaptop.nix];
+      };
+      "dmpo@homepc" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
+        };
+        modules = [./home-manager/homepc.nix];
+      };
+      "dmpo@kvm" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
+        };
+        modules = [./home-manager/kvm.nix];
+      };
+      "dmpo@SE-LT-000003" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
+        };
+        modules = [./home-manager/SE-LT-000003.nix];
+      };
+      "dmpo@nix-main" = home-manager.lib.homeManagerConfiguration {
+        pkgs = nixpkgs.legacyPackages.x86_64-linux;
+        extraSpecialArgs = {
+          inherit inputs outputs;
+          inherit nix-colors;
+        };
+        modules = [./home-manager/nix-main.nix];
+      };
+    };
+  };
 }

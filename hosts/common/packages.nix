@@ -3,9 +3,7 @@
   lib,
   pkgs,
   ...
-}:
-
-{
+}: {
   environment.systemPackages = with pkgs; [
     age
     btop
@@ -27,6 +25,7 @@
     neovim
     neofetch
     nettools
+    nodejs
     p7zip
     sops
     ripgrep

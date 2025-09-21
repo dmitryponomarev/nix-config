@@ -19,7 +19,6 @@
     grim
     networkmanagerapplet
     slurp
-    swappy
     waybar
     wf-recorder
     wl-clipboard
