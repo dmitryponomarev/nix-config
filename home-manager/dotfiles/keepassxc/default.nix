@@ -1,5 +1,8 @@
-{ config, pkgs, ... }:
 {
+  config,
+  pkgs,
+  ...
+}: {
   programs.keepassxc = {
     enable = true;
     settings = {
@@ -10,6 +13,7 @@
         ApplicationTheme = "dark";
         ColorPasswords = true;
         MinimizeOnClose = true;
+        MonospaceNotes = true;
         MinimizeOnStartup = true;
         ShowTrayIcon = true;
         HidePasswords = false;
@@ -27,7 +31,7 @@
         CustomProxyLocation = "";
       };
       Security = {
-        ClearClipboardTimeout = 20;
+        ClearClipboardTimeout = 60;
       };
     };
   };

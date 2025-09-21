@@ -11,6 +11,7 @@
       ouch = ouch;
       chmod = chmod;
       smart-enter = smart-enter;
+      starship = starship;
       # jump-to-char = jump-to-char;
     };
     keymap = {

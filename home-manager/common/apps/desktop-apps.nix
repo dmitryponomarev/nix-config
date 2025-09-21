@@ -9,6 +9,7 @@
     audacity
     brave
     dbeaver-bin
+    libreoffice-qt
     telegram-desktop
     libnotify
     remmina
