@@ -4,6 +4,22 @@
   keymaps = [
     {
       mode = "n";
+      key = "<S-h>";
+      action = "<cmd>bprevious<cr>";
+      options = {
+        desc = "Previous buffer";
+      };
+    }
+    {
+      mode = "n";
+      key = "<S-l>";
+      action = "<cmd>bnext<cr>";
+      options = {
+        desc = "Next buffer";
+      };
+    }
+    {
+      mode = "n";
       key = "<A-j>";
       action = "<cmd>m .+1<cr>==";
       options = {
@@ -72,6 +88,14 @@
       action = "<cmd>noh<cr><esc>";
       options = {
         desc = "Escape and Clear hlsearch";
+      };
+    }
+    {
+      mode = "n";
+      key = "<leader>d";
+      action = "<cmd>bd<cr>";
+      options = {
+        desc = "Close buffer";
       };
     }
     {

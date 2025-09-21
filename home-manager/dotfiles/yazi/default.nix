@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
 {
-
+  config,
+  pkgs,
+  ...
+}: {
   programs.yazi = {
     enable = true;
     plugins = with pkgs.yaziPlugins; {
@@ -8,14 +10,20 @@
       # piper = piper;
       ouch = ouch;
       chmod = chmod;
+      smart-enter = smart-enter;
       # jump-to-char = jump-to-char;
     };
     keymap = {
       mgr.prepend_keymap = [
         {
-          on = [ "C" ];
+          on = ["C"];
           run = "plugin ouch";
           desc = "Compress with ouch";
+        }
+        {
+          on = ["l"];
+          run = "plugin smart-enter";
+          desc = "Enter the child directory, or open the file";
         }
         {
           on = [
@@ -28,7 +36,6 @@
       ];
     };
     settings = {
-
       mgr = {
         ratio = [
           1
@@ -73,7 +80,6 @@
             for = "unix";
           }
         ];
-
       };
       plugin = {
         prepend_previewers = [

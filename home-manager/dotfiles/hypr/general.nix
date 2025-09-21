@@ -3,11 +3,9 @@
   pkgs,
   nix-colors,
   ...
-}:
-{
+}: {
   wayland.windowManager.hyprland = {
     settings = {
-
       monitor = [
         "HDMI-A-1,preferred,0x0,auto"
         "DP-1,preferred,1920x0,auto"
@@ -26,7 +24,7 @@
 
       input = {
         kb_layout = "se,ru";
-        kb_options = "grp:alt_shift_toggle,crtl:nocaps";
+        kb_options = "grp:alt_shift_toggle,ctrl:nocaps";
         numlock_by_default = true;
         repeat_delay = 300;
         repeat_rate = 60;

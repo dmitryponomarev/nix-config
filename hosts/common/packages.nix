@@ -9,7 +9,6 @@
     btop
     chatblade
     croc
-    chromium
     dig
     eza
     fd
