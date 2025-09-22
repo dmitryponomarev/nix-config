@@ -18,8 +18,10 @@
     difftastic
     dos2unix
     google-java-format
+    gcc
     htmlhint
     jdk21
+    jdt-language-server
     lshw
     markdownlint-cli
     mypy
@@ -30,6 +32,7 @@
     scanmem
     shellcheck
     stylua
+    ruff
     terraform
     terraform-ls
     tmux

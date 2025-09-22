@@ -13,6 +13,7 @@
     libreoffice-qt
     telegram-desktop
     libnotify
+    palemoon-bin
     remmina
     mpv
     gimp
