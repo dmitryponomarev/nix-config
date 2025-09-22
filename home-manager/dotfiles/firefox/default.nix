@@ -5,6 +5,7 @@
 }: {
   programs.firefox = {
     enable = true;
+    nativeMessagingHosts = [pkgs.keepassxc];
     profiles = {
       default = {
         id = 0;

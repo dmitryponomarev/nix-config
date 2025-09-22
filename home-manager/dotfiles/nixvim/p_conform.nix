@@ -8,9 +8,9 @@
 
     settings = {
       notify_on_error = true;
-      format_on_save = {
-        lsp_format = "fallback";
-      };
+      # format_on_save = {
+      #   lsp_format = "never";
+      # };
       formatters_by_ft = {
         # c = ["clang-format"];
         # cpp = ["clang-format"];
@@ -41,8 +41,8 @@
         alejandra = {
           command = lib.getExe pkgs.alejandra;
         };
-        shellcheck = {
-          command = lib.getExe pkgs.shellcheck;
+        java = {
+          command = lib.getExe pkgs.google-java-format;
         };
         prettier = {
           command = lib.getExe pkgs.prettier;

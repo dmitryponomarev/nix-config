@@ -19,6 +19,9 @@
       jsonlint = {
         cmd = lib.getExe pkgs.nodePackages.jsonlint;
       };
+      # java = {
+      #   cmd = lib.getExe pkgs.checkstyle;
+      # };
       luacheck = {
         cmd = lib.getExe pkgs.luaPackages.luacheck;
       };
@@ -35,6 +38,7 @@
       json = ["jsonlint"];
       yaml = ["yamllint"];
       lua = ["luacheck"];
+      # java = ["checkstyle"];
       markdown = ["markdownlint"];
       python = ["mypy"];
       nix = ["deadnix"];

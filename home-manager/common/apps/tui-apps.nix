@@ -12,22 +12,24 @@
   home.packages = with pkgs; [
     alejandra
     azure-cli
+    checkstyle
     cmake-format
     deadnix
     difftastic
     dos2unix
-    htmlhint
     google-java-format
+    htmlhint
+    jdk21
     lshw
     markdownlint-cli
     mypy
     prettier
     prettierd
     pulsemixer
+    ruff
     scanmem
     shellcheck
     stylua
-    ruff
     terraform
     terraform-ls
     tmux
