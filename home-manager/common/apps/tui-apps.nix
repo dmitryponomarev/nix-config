@@ -4,7 +4,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   imports = [
     inputs.nixvim.homeModules.nixvim
   ];
@@ -19,6 +20,7 @@
     dos2unix
     google-java-format
     gcc
+    hadolint
     htmlhint
     jdk21
     jdt-language-server

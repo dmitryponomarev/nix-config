@@ -4,6 +4,14 @@
   keymaps = [
     {
       mode = "n";
+      key = "<A-w>";
+      action = "<cmd>set wrap!<CR>";
+      options = {
+        desc = "Toggle wrap";
+      };
+    }
+    {
+      mode = "n";
       key = "<S-h>";
       action = "<cmd>bprevious<cr>";
       options = {

@@ -4,7 +4,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   home.packages = with pkgs; [
     audacity
     brave
@@ -13,10 +14,12 @@
     libreoffice-qt
     telegram-desktop
     libnotify
+    kdiff3
     palemoon-bin
     remmina
     mpv
     gimp
     qbittorrent
+    zoom-us
   ];
 }
