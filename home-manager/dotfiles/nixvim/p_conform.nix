@@ -2,7 +2,8 @@
   lib,
   pkgs,
   ...
-}: {
+}:
+{
   plugins.conform-nvim = {
     enable = true;
 
@@ -16,21 +17,24 @@
         # cpp = ["clang-format"];
         # h = ["clang-format"];
         # hpp = ["clang-format"];
-        bash = ["shellcheck"];
-        docker = ["hadolint"];
-        cmake = ["cmake-format"];
-        css = ["prettierd"];
-        html = ["prettierd"];
+        bash = [ "shellcheck" ];
+        docker = [ "hadolint" ];
+        cmake = [ "cmake-format" ];
+        css = [ "prettierd" ];
+        html = [ "prettierd" ];
         # groovy = ["prettier"];
         # gradle = ["prettier"];
-        java = ["google-java-format"];
-        javascript = ["prettierd"];
-        lua = ["stylua"];
-        nix = ["alejandra"];
-        sh = ["shellcheck"];
-        terraform = ["terraform_fmt"];
-        typescript = ["prettierd"];
-        yaml = ["yamlfmt"];
+        java = [ "google-java-format" ];
+        javascript = [ "prettierd" ];
+        lua = [ "stylua" ];
+        nix = [ "alejandra" ];
+        sh = [ "shellcheck" ];
+        terraform = [ "terraform_fmt" ];
+        typescript = [ "prettierd" ];
+        yaml = [ "yamlfmt" ];
+        xml = [
+          "xmllint"
+        ];
         "_" = [
           "squeeze_blanks"
           "trim_whitespace"
@@ -79,7 +83,7 @@
 
   keymaps = [
     {
-      mode = ["n"];
+      mode = [ "n" ];
       key = "<leader>cf";
       action = "<cmd>lua require('conform').format()<cr>";
       options = {

@@ -24,6 +24,7 @@
     htmlhint
     jdk21
     jdt-language-server
+    libxml2
     lshw
     markdownlint-cli
     mypy
