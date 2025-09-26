@@ -11,6 +11,7 @@
   # You can import other home-manager modules here
   imports = [
     ../dotfiles/cliphist/default.nix
+    ../dotfiles/chromium/default.nix
     ../dotfiles/eza/default.nix
     ../dotfiles/firefox/default.nix
     ../dotfiles/git/default.nix
@@ -18,15 +19,15 @@
     ../dotfiles/kitty/default.nix
     ../dotfiles/mako/default.nix
     ../dotfiles/ncspot/default.nix
-    ../dotfiles/obsidian/default.nix
-    ../dotfiles/swappy/default.nix
-    ../dotfiles/nixvim/default.nix
     ../dotfiles/nix-colors/default.nix
+    ../dotfiles/nixvim/default.nix
+    ../dotfiles/obsidian/default.nix
     ../dotfiles/starship/default.nix
+    ../dotfiles/swappy/default.nix
     ../dotfiles/swaylock/default.nix
+    ../dotfiles/waybar/default.nix
     ../dotfiles/wofi/default.nix
     ../dotfiles/yazi/default.nix
-    ../dotfiles/waybar/default.nix
     ../dotfiles/zathura/default.nix
     ../dotfiles/zsh/default.nix
   ];
