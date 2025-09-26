@@ -1,6 +1,6 @@
 {
   globals.mapleader = " ";
-  globals.localleader = " ";
+  globals.localleader = "\\";
 
   keymaps = [
     {

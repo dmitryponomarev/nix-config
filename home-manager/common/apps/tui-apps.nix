@@ -26,6 +26,7 @@
     jdt-language-server
     libxml2
     lshw
+    nmap
     markdownlint-cli
     mypy
     prettier
