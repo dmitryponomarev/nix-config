@@ -6,7 +6,8 @@
   config,
   pkgs,
   ...
-}: {
+}:
+{
   # You can import other home-manager modules here
   imports = [
     ../dotfiles/cliphist/default.nix
@@ -17,7 +18,7 @@
     ../dotfiles/kitty/default.nix
     ../dotfiles/mako/default.nix
     ../dotfiles/ncspot/default.nix
-    # ../dotfiles/npm/default.nix
+    ../dotfiles/obsidian/default.nix
     ../dotfiles/swappy/default.nix
     ../dotfiles/nixvim/default.nix
     ../dotfiles/nix-colors/default.nix
@@ -44,11 +45,11 @@
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
-      "default-web-browser" = ["firefox.desktop"];
-      "text/html" = ["firefox.desktop"];
-      "x-scheme-handler/http" = ["firefox.desktop"];
-      "x-scheme-handler/https" = ["firefox.desktop"];
-      "x-scheme-handler/about" = ["firefox.desktop"];
+      "default-web-browser" = [ "firefox.desktop" ];
+      "text/html" = [ "firefox.desktop" ];
+      "x-scheme-handler/http" = [ "firefox.desktop" ];
+      "x-scheme-handler/https" = [ "firefox.desktop" ];
+      "x-scheme-handler/about" = [ "firefox.desktop" ];
     };
   };
 
