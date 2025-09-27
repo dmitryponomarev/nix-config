@@ -16,6 +16,12 @@
       # "$mainMod, C, exec, ${lib.getExe inputs.hyprpicker.packages.${system}.default} --format=hex --autocopy"
       "$mainMod, D, exec, wofi -i -I --show drun"
       "$mainMod, E, exec, keepassxc"
+      # "$mainMod, section, exec, obsidian"
+      "$mainMod, section, togglespecialworkspace, hidden"
+      "$mainMod, section, movetoworkspace, +0"
+      "$mainMod, section, togglespecialworkspace, hidden"
+      "$mainMod, section, movetoworkspace, special:hidden"
+      "$mainMod, section, togglespecialworkspace, hidden"
       "$mainMod, F, fullscreen,"
       "$mainMod, P, pin"
       "$mainMod, Q, killactive,"
@@ -73,6 +79,10 @@
     bindm = [
       "$mainMod, mouse:272, movewindow"
       "$mainMod, mouse:273, resizewindow"
+    ];
+    bindl = [
+      '', switch:on:Lid Switch, exec, hyprctl keyword monitor "eDP-1, disable"''
+      '', switch:off:Lid Switch, exec, hyprctl keyword monitor "eDP-1, preferred, 2560x0, 2"''
     ];
   };
 }
